@@ -1,0 +1,4 @@
+venv
+.idea
+instance/posts.db
+post.db
