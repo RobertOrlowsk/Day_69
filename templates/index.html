@@ -3,13 +3,13 @@
 <!-- Page Header-->
 <header
   class="masthead"
-  style="background-image: url('../static/assets/img/home-bg.jpg')"
+  style="background-image: url('../static/assets/img/home-bg.jpeg')"
 >
   <div class="container position-relative px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-md-10 col-lg-8 col-xl-7">
         <div class="site-heading">
-          <h1>Orłowski Blog</h1>
+          <h1>Eagle Blog 🦅</h1>
           <span class="subheading">A collection of random musings.</span>
 
         </div>
@@ -18,8 +18,8 @@
   </div>
 </header>
 <!-- Main Content-->
-<div class="container px-4 px-lg-5">
-  <div class="row gx-4 gx-lg-5 justify-content-center">
+<div class="container px-4 px-lg-5 ">
+  <div class="row gx-4 gx-lg-5 justify-content-center ">
     <div class="col-md-10 col-lg-8 col-xl-7">
       <!-- Post preview-->
       {% for post in all_posts %}
@@ -42,7 +42,7 @@
       {% endfor %}
 
       <!-- New Post -->
-
+      {% if  current_user.is_authenticated %}
       <div class="d-flex justify-content-end mb-4">
         <a
           class="btn btn-primary float-right"
@@ -50,9 +50,10 @@
           >Create New Post</a
         >
       </div>
+      {% endif %}
 
       <!-- Pager-->
-      <div class="d-flex justify-content-end mb-4">
+      <div class="d-none">
         <a class="btn btn-secondary text-uppercase" href="#!">Older Posts →</a>
       </div>
     </div>
